@@ -1,19 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8">
-	<title>Nicole's final project</title>
+	<title>Oh, all the places you'll go</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<div class="container">
+	<h1>Oh, all the places you'll go</h1>
+	<button class="btn btn-default" id="expand-btn">Add a new place</button>
+	<form id="input-form">    
+	    <div class="row">
+	        <div class="col-xs-12 col-md-4">
+	        	<div class="form-group">
+	    			<label for="place">Which place?*</label>
+	    			<input type="text" id="whichPlace" class="form-control" placeholder="Carousel Bar">
+	    			<p id="whichPlaceError"></p>
+	    		</div>
+		        <div class="form-group">
+		    		<label for="coords">Where is it?*</label>
+		    		<input type="text" id="whereIsIt" class="form-control" placeholder="29.954161, -90.068035">
+		    		<p id="whereIsItError"></p>
+		        </div>
+	       		<div class="form-group">
+		  			<label for="place-type">What is it?*</label>  <!-- id="whatIsIt" -->
+			  		<div class="radio">
+		  				<label><input type="radio" name="optradio" value="Food&Drinks">Food&Drinks</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="optradio" value="Fun">Fun</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="optradio" value="Scenic place">Scenic place</label>
+					</div>
+					<p id="whatIsItError"></p>
+        		</div>
+        	</div>
+	        <div class="col-xs-12 col-md-4">
+	        	<div class="form-group">
+		  			<label for="description">Tell me more!</label>
+		  			<textarea class="form-control" id="tellMeMore" rows="8" id="description"></textarea>
+		  		</div>
+  				<button type="submit" class="btn btn-default">Add it to the map!</button>
+  			</div>
+    	</div>
+    </form>
+	&nbsp;
+    <div>
+    	<p>
+    		<img id="marker" src="http://maps.google.com/mapfiles/ms/icons/green-dot.png">Food&Drinks &nbsp;
+    		<img id="marker" src="http://maps.google.com/mapfiles/ms/icons/red-dot.png">Fun &nbsp;
+    		<img id="marker" src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png">Scenic place
+    	</p>
+    	
+    	
+    <!-- </div>
+	<div class="btn-group addpadding">
+  		<button type="button" class="btn btn-primary">Food/Drinks</button>
+		<button type="button" class="btn btn-primary">Fun</button>
+		<button type="button" class="btn btn-primary">Scenic place</button>
+	</div> -->
 
-	<div id="map"></div>
+	<div id="map"><div>
+</div>
 
-
+<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+<!-- jQuery -->
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<!-- main.js -->
 	<script type="text/javascript" src="js/main.js"></script>
+<!-- Google API -->
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA42wF9OBnto7aBIDgDyz1mZWmOpnk2SoE&callback=initMap"
+  type="text/javascript"></script>
 
-	<!-- Google mpas script -->
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA42wF9OBnto7aBIDgDyz1mZWmOpnk2SoE&callback=initMap"></script>
-	<!-- End Google maps script -->
 </body>
 </html>

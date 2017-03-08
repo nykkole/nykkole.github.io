@@ -1,0 +1,69 @@
+body {
+	font-family: sans-serif;
+	background: url("images/dr-seuss-street-sign-clipart-free-clip-art-images.jpg");
+	background-size: 50%;
+    background-repeat: no-repeat; 
+    background-position: right top;
+}
+
+#expand-btn {
+    margin-bottom: 30px;
+}
+
+#input-form {
+    display: none;
+}
+
+#marker {
+    height: 20px;
+}
+
+#whereIsItError {
+    color: red;
+}
+
+#whichPlaceError {
+    color: red;
+}
+
+#whatIsItError {
+    color: red;
+}
+
+@media all and (max-width: 600px) {
+    body {
+        max-width: 100%;
+        background: none;
+    }
+
+    #map {
+    	height: 100px;
+    }
+}
+
+#map {
+	height: 500px;
+    margin-bottom: 1em;
+}
+
+h1 {
+	color: #2e99e6; /*blue #2e99e6*/
+	padding-bottom: 0.5em;
+}
+
+.firstHeading {
+    color: #2e99e6; /*blue #2e99e6*/
+    padding-bottom: 0;
+}
+
+.addpadding {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.delete {
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 0.5em;
+    float: right;
+}
