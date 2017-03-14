@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div id="main">
+	<h1>Get chat and newsletter schedule</h1>
+	<div>
+		<form>
+	  		<input type="text" placeholder="Enter a year" id="year">
+	  		<button type="submit" id="button">Go!</button>
+<!-- 	  		<input type="button" id="button" name="button" value="Go!" />
+ -->		</form>
+
+	</div>
+
+	<p id="instruction">Enter a year to display all chat and newsletter dates.</p>
+	<p id="errorMessage"></p>
+
+	<a href="http://www.google.com/calendar/event?
+		action=TEMPLATE
+		&text='noon chat'
+		&dates=20170124T120000Z/20170124T130000Z
+		&details='noon chat'
+		&trp=false
+		&sprop=
+		&sprop=name:"
+		target="_blank" rel="nofollow">Add to my calendar</a>
+	<table class="center">
+		<tr>
+			<td>
+				<h2 id="chat">Chat schedule</h2>
+				<ul id="chatTuesdays"></ul>
+			</td>
+			<td>
+				<h2 id="newsletter">Newsletter schedule</h2>
+				<ul id="newsletterDays"></ul>
+			</td>
+		</tr>
+	</table>
+</div> 
+	
+	<!-- ALL the scripts!! -->
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
