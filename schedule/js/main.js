@@ -12,10 +12,10 @@ $('#button').on('click', function(e) {
     // check if input year is numeric
     if ($.isNumeric(chosenYear) != true) {
         $('#errorMessage').html('This will only work if you enter a number.');
-        console.log(chosenYear.isNumeric);
+        //console.log(chosenYear.isNumeric);
     // if input year is numeric, clear error message and get dates of chat
     } else {
-        console.log(chosenYear);
+        //console.log(chosenYear);
         $('#errorMessage').html('');
         // -------- loop toDateString get second and fourth Tuesday of a month
         for (i=0; i<12; i++) {
@@ -31,7 +31,7 @@ $('#button').on('click', function(e) {
         // --------- get chat dates to display as 'Month XX'
         var chatDates = s.toDateString().split(' '); // split date object where spaces are
         $('#chatTuesdays').append('<li>' + chatDates[1] + ' ' + chatDates[2] + '</li>'); //display only month and date of array
-
+        console.log(chatDates[1]);
         // --------- get the date 9 days after each chat Tuesday
         var followingThursday = new Date(s.getFullYear(), s.getMonth(), s.getDate() + 9);
 
