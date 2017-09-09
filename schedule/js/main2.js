@@ -62,7 +62,6 @@ $('#button').on('click', function(e) {
         $('#newsletterDays').append('<li>' + newsletterDate + '</li>');
         //append information for CSV file Subject:Newsletter, All day event:TRUE, dates from variables. ----------------- create download file, see: http://jsfiddle.net/VBJ9h/319/
         csvFileContent = csvFileContent + 'Newsletter%2C' + newsletterDate + '%2C%2C' + newsletterDate + '%2C%2C' + 'TRUE%0A';
-        //console.log(csvFileContent);
     }
 
 // -------- this function returns chat dates
