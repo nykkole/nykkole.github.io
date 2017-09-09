@@ -1,0 +1,15 @@
+@media all and (max-width: 600px) {
+    body {
+        max-width: 100%;
+        background: none;
+    }
+
+    #map {
+    	height: 100px;
+    }
+}
+
+#map {
+	height: 500px;
+    margin-bottom: 1em;
+}
