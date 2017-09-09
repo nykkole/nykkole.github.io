@@ -1,15 +1,27 @@
 @media all and (max-width: 600px) {
     body {
-        max-width: 100%;
+        max-width: 90%;
         background: none;
     }
 
     #map {
     	height: 100px;
     }
+
+    #info {
+    	height: 100px;
+    }
 }
 
 #map {
-	height: 500px;
+	height: 550px;
+	width: 50%;
     margin-bottom: 1em;
+}
+
+#info {
+	height: 550px;
+	width: 50%
+	margin-left: 1em;
+	margin-bottom: 1em;
 }

@@ -24,14 +24,14 @@ var map;
         ];
 
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 53.000, lng: -7.671},  //53.203823, -7.671809
+            center: {lat: 52.900, lng: -8.171},  //53.203823, -7.671809
             zoom: 7,
             zoomControl: true,
-            mapTypeControl: true,
+            mapTypeControl: false,
             scaleControl: true,
             streetViewControl: true,
             rotateControl: true,
-            fullscreenControl: true,
+            fullscreenControl: false,
             scrollwheel: false,
             styles: styles
         });
@@ -143,16 +143,7 @@ var map;
             //Parking in Dublin, Christchurch Car Park
             position: new google.maps.LatLng(53.3423698,-6.26984),
             type: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
-          }, {
-            //
-            position: new google.maps.LatLng(),
-            type: ''
-          }, {
-            //
-            position: new google.maps.LatLng(),
-            type: ''
           }
-
         ];
 
         // Create markers.
