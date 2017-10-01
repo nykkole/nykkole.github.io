@@ -150,6 +150,7 @@ var markers = [];
 		    		'<button class="btn btn-default delete">Delete</button>'
 		    	'</div>'+
 	    	'</div>';
+	    	console.log('feature.name is ' + feature.name);
 
 		var marker = new google.maps.Marker({
 			position: {lat: feature.position[0], lng: feature.position[1]},
@@ -157,6 +158,7 @@ var markers = [];
 			icon: feature.typeOfPlace
 			//title: feature.placeName // seems unnecessary
 		});
+
 		//eventlistener to display information when pin is clicked
 		marker.addListener('click', function() {
 			infowindow.close();
