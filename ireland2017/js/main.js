@@ -50,7 +50,7 @@ function initMap() {
     // --------------------- array of places
     var places = [{
         heading: "Conolly's Folly",
-        description: 'Geocache and instersting story',
+        description: 'Geocache and interesting story',
         position: new google.maps.LatLng(53.3698532,-6.5623387),
         type: 'highlight'
       }, {
@@ -104,7 +104,7 @@ function initMap() {
         position: new google.maps.LatLng(52.0044866,-9.507272),
         type: 'scenic'
       }, {
-        heading: "Ladies View, viewpoint",
+        heading: "Viewpoint: Ladies View",
         description: 'Gorgeous view',
         position: new google.maps.LatLng(51.968600, -9.594750),
         type: 'scenic'
@@ -165,7 +165,7 @@ function initMap() {
         type: 'dining'
       }, {
         heading: "Christchurch Car Park",
-        description: 'Avordable parking in Dublin', 
+        description: 'Affordable parking in Dublin', 
         position: new google.maps.LatLng(53.3423698,-6.26984),
         type: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
       }
@@ -220,5 +220,34 @@ function initMap() {
 		}
 	};
 
+	drawPolyline(map);
 	populateMap();
 };
+
+
+//function to draw polyline
+function drawPolyline(map) {
+	var pathCoordinates = [
+		new google.maps.LatLng(53.410592, -6.234463),//Dublin
+		new google.maps.LatLng(53.2656137,-9.0628821),//Galway
+		new google.maps.LatLng(53.1262304,-9.0502399),//The Burren
+		new google.maps.LatLng(52.9715489,-9.4396372),//Cliffs of Moher
+		new google.maps.LatLng(52.0634107,-9.5074038),//Kilarney
+		new google.maps.LatLng(51.750081, -9.550392),//southern tip
+		new google.maps.LatLng(51.931493, -8.568476),//barley stone
+		new google.maps.LatLng(52.6504656,-7.2514866),//Kilkenny
+		new google.maps.LatLng(53.0119921,-6.3385948),//Glendalough
+		new google.maps.LatLng(53.1913032,-6.0824887),//Europe's first
+		new google.maps.LatLng(53.410592, -6.234463),//Dublin
+	];
+
+	var pathToCenter = new google.maps.Polyline({
+		path: pathCoordinates,
+		geodesic: false,
+		strokeColor: '#006400',
+		strokeOpacity: 1.0,
+		strokeWeight: 2
+	});
+
+	pathToCenter.setMap(map);
+}
