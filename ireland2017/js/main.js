@@ -1,3 +1,5 @@
+var map;
+
 // --------------------- map and pins
 function initMap() {
 
@@ -23,7 +25,7 @@ function initMap() {
 	  }
 	];
 
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 52.660, lng: -8.271},  //53.203823, -7.671809
         zoom: 8,
         zoomControl: true,
@@ -220,34 +222,74 @@ function initMap() {
 		}
 	};
 
-	drawPolyline(map);
+	//drawPolyline(map);
+    calcRoute(map);
 	populateMap();
 };
 
+function calcRoute() {
+    var directionsService = new google.maps.DirectionsService();
+    var directionsDisplay = new google.maps.DirectionsRenderer({
 
-//function to draw polyline
-function drawPolyline(map) {
-	var pathCoordinates = [
-		new google.maps.LatLng(53.410592, -6.234463),//Dublin
-		new google.maps.LatLng(53.2656137,-9.0628821),//Galway
-		new google.maps.LatLng(53.1262304,-9.0502399),//The Burren
-		new google.maps.LatLng(52.9715489,-9.4396372),//Cliffs of Moher
-		new google.maps.LatLng(52.0634107,-9.5074038),//Kilarney
-		new google.maps.LatLng(51.750081, -9.550392),//southern tip
-		new google.maps.LatLng(51.931493, -8.568476),//barley stone
-		new google.maps.LatLng(52.6504656,-7.2514866),//Kilkenny
-		new google.maps.LatLng(53.0119921,-6.3385948),//Glendalough
-		new google.maps.LatLng(53.1913032,-6.0824887),//Europe's first
-		new google.maps.LatLng(53.410592, -6.234463),//Dublin
-	];
+    });
+    directionsDisplay.setMap(map);
+    directionsDisplay.setOptions( { suppressMarkers: true } );
 
-	var pathToCenter = new google.maps.Polyline({
-		path: pathCoordinates,
-		geodesic: false,
-		strokeColor: '#006400',
-		strokeOpacity: 1.0,
-		strokeWeight: 2
-	});
-
-	pathToCenter.setMap(map);
+    var start = 'Dublin Airport';
+    var end = 'Dublin Airport';
+    var request = {
+        origin: start,
+        waypoints: [
+    {location: 'Kilbeggan'},
+    {location: 'Galway'},
+    {location: 'Doolin'},
+    {location: 'Cliffs of Moher'},
+    {location: 'Ennis'},
+    {location: 'Kilarney'},
+    {location: 'Eirk, Molls Gap, County Kerry, Ireland'},
+    {location: 'Glengarriff'},
+    {location: 'Blarney'},
+    {location: 'Kilkenny'},
+    {location: 'Glendalough'},
+    {location: 'Bray'},
+    {location: 'Christchurch Car Park, Werburgh Street, Wood Quay, Dublin 8, Ireland'}
+    ],
+        destination: end,
+        travelMode: google.maps.TravelMode.DRIVING //default
+    };
+    directionsService.route(request, function(result, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(result);
+        } else {
+            alert('Could not calculate directions because: ' + status);
+        }
+    });
 }
+
+
+// //function to draw polyline
+// function drawPolyline(map) {
+// 	var pathCoordinates = [
+// 		new google.maps.LatLng(53.410592, -6.234463),//Dublin
+// 		new google.maps.LatLng(53.2656137,-9.0628821),//Galway
+// 		new google.maps.LatLng(53.1262304,-9.0502399),//The Burren
+// 		new google.maps.LatLng(52.9715489,-9.4396372),//Cliffs of Moher
+// 		new google.maps.LatLng(52.0634107,-9.5074038),//Kilarney
+// 		new google.maps.LatLng(51.750081, -9.550392),//southern tip
+// 		new google.maps.LatLng(51.931493, -8.568476),//barley stone
+// 		new google.maps.LatLng(52.6504656,-7.2514866),//Kilkenny
+// 		new google.maps.LatLng(53.0119921,-6.3385948),//Glendalough
+// 		new google.maps.LatLng(53.1913032,-6.0824887),//Europe's first
+// 		new google.maps.LatLng(53.410592, -6.234463),//Dublin
+// 	];
+
+// 	var pathToCenter = new google.maps.Polyline({
+// 		path: pathCoordinates,
+// 		geodesic: false,
+// 		strokeColor: '#006400',
+// 		strokeOpacity: 1.0,
+// 		strokeWeight: 2
+// 	});
+
+// 	pathToCenter.setMap(map);
+// }
