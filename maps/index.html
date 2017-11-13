@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maps</title>
+	<meta charset="utf-8"
+		name="viewport"
+		content="initial-scale=1.0, user-scaleable=no">
+	<style type="text/css">
+		html {
+			height: 100%
+		}
+		body {
+			height: 100%;
+			margin: 0;
+			padding: 0
+		}
+		#map {
+			height: 100%
+		}
+
+		#coordsDiv {
+			display: none;
+			position: absolute;
+			background-color: white;
+			border: 1px solid black;
+			bottom: 50px;
+			right: 50px;
+			height:50px;
+			width: 380px;
+			padding-top: 5px;
+			padding-left: 5px;
+		}
+
+		#address {
+			width: 300px;
+		}
+
+		#start {
+			width: 300px;
+		}
+
+		#directionsPanel {
+			float: right;
+			width: 30%;
+			height: 100%;
+		}
+	</style>
+	<!-- Access Google maps API -->
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKYp0IHTwApWwHZOpYJ3td9e_qsKSes8g"></script>
+</head>
+<body>
+	<button id="btnTerrain">Terrain</button>
+	<button id="btnRoadmap">Roadmap</button>
+	<button id="btnSatellite">Sattelite</button>
+	<button id="btnHybrid">Hybrid</button>
+
+	<!-- Geocoder -->
+	<div>
+		<input id="address" type="textbox" value="Knighton, Powys">
+		<input type="button" value="Geocode!" onclick="geocodeAddress()">
+	</div>
+
+	<!-- Direction services -->
+	<div>
+		<input id="start" type="textbox" value="">
+		<input type="button" value="Get route!" onclick="calcRoute()">
+	</div>
+	<div id="directionsPanel"></div>
+
+	<div id="map"></div>
+	<div id="coordsDiv"></div>
+
+	<!-- main.js -->
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
