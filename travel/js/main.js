@@ -26,8 +26,8 @@ function initMap() {
 	];
 
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 52.660, lng: -8.271},  //53.203823, -7.671809
-        zoom: 8,
+        center: {lat: 38.092, lng: -56.085},  //38.092807, -56.085236
+        zoom: 3,
         zoomControl: true,
         mapTypeControl: false,
         scaleControl: true,
@@ -44,12 +44,71 @@ function initMap() {
       scenic: iconBase + 'parks_maps.png',
       dining: iconBase + 'dining_maps.png',
       highlight: iconBase + 'capital_big_highlight_maps.png',
-      sleeping: iconBase + 'lodging_maps.png'
+      sleeping: iconBase + 'lodging_maps.png',
+      camping: iconBase + 'campground_maps.png'
     };
 
     // --------------------- array of places
+    var places = [
+    //Camping trips
+    {
+        heading: 'Millersylvania, Jan 2018',
+        description: 'National park with a lake and an old orchard',
+        position: new google.maps.LatLng(46.912214, -122.911650),
+        type: 'camping'
+      }, {
+        heading: 'Belfair State Park, Oct 14 2017',
+        description: 'Waterside camping',
+        position: new google.maps.LatLng(47.429605, -122.878229),
+        type: 'camping'
+      }, {
+        heading: 'Dash Point State Park, Nov 17 2017',
+        description: 'Camping near the sound',
+        position: new google.maps.LatLng(47.318974, -122.408130),
+        type: 'camping'
+      }, {
+        heading: 'Kanaskat-Palmer State Park, Oct 7 2017',
+        description: 'Camping along a river with salmons',
+        position: new google.maps.LatLng(47.319986, -121.904917),
+        type: 'camping'
+      }, {
+        heading: 'Walla Walla State Park, Jun 2017',
+        description: 'Camping on the grass',
+        position: new google.maps.LatLng(47.444916, -120.318303),
+        type: 'camping'
+      }, {
+        heading: 'Friday Creek campground, Sep 3 2016',
+        description: 'Gorgeous trees and a small creek',
+        position: new google.maps.LatLng(48.582519, -122.340627),
+        type: 'camping'
+      }, {
+        heading: 'Hemple Creek campground, May 2017',
+        description: 'Camping right by a river with a small beach',
+        position: new google.maps.LatLng(48.078848, -121.745540),
+        type: 'camping'
+      }, {
+        heading: 'Olympia Campground, Sep 2016',
+        description: '',
+        position: new google.maps.LatLng(46.966341, -122.921822),
+        type: 'camping'
+      }, {
+        heading: 'Klahowya Campground, Sep 2016',
+        description: 'Camping amongs giganting trees, sheltered from other campers',
+        position: new google.maps.LatLng(48.066313, -124.114836),
+        type: 'camping'
+      }, {
+        heading: '',
+        description: '',
+        position: new google.maps.LatLng(),
+        type: 'camping'
+      }, {
+        heading: '',
+        description: '',
+        position: new google.maps.LatLng(),
+        type: 'camping'
+      },
     // Ireland  Aug 17
-    var places = [{
+    {
         heading: "Conolly's Folly",
         description: 'Geocache and interesting story',
         position: new google.maps.LatLng(53.3698532,-6.5623387),
@@ -332,7 +391,8 @@ function calcRouteCR() {
     var directionsService = new google.maps.DirectionsService();
     var directionsDisplay = new google.maps.DirectionsRenderer({});
     directionsDisplay.setMap(map);
-    directionsDisplay.setOptions( { suppressMarkers: true });
+    directionsDisplay.setOptions({suppressMarkers: true});
+    directionsDisplay.setOptions({preserveViewport: true});
 
     var start = 'Juan Santamaria Airport';
     var end = 'Juan Santamaria Airport';
@@ -374,7 +434,8 @@ function calcRouteIRE() {
     var directionsService = new google.maps.DirectionsService();
     var directionsDisplay = new google.maps.DirectionsRenderer({});
     directionsDisplay.setMap(map);
-    directionsDisplay.setOptions( { suppressMarkers: true } );
+    directionsDisplay.setOptions({suppressMarkers: true});
+    directionsDisplay.setOptions({preserveViewport: true} );
 
     var start = 'Dublin Airport';
     var end = 'Dublin Airport';
@@ -385,7 +446,7 @@ function calcRouteIRE() {
     {location: 'Galway'},
     {location: 'Doolin'},
     {location: 'Cliffs of Moher'},
-    {location: 'Ennis'},
+    {location: 'Ennis Ireland'},
     {location: 'Kilarney'},
     {location: 'Eirk, Molls Gap, County Kerry, Ireland'},
     {location: 'Glengarriff'},
@@ -406,31 +467,3 @@ function calcRouteIRE() {
         }
     });
 }
-
-
-// //function to draw polyline
-// function drawPolyline(map) {
-// 	var pathCoordinates = [
-// 		new google.maps.LatLng(53.410592, -6.234463),//Dublin
-// 		new google.maps.LatLng(53.2656137,-9.0628821),//Galway
-// 		new google.maps.LatLng(53.1262304,-9.0502399),//The Burren
-// 		new google.maps.LatLng(52.9715489,-9.4396372),//Cliffs of Moher
-// 		new google.maps.LatLng(52.0634107,-9.5074038),//Kilarney
-// 		new google.maps.LatLng(51.750081, -9.550392),//southern tip
-// 		new google.maps.LatLng(51.931493, -8.568476),//barley stone
-// 		new google.maps.LatLng(52.6504656,-7.2514866),//Kilkenny
-// 		new google.maps.LatLng(53.0119921,-6.3385948),//Glendalough
-// 		new google.maps.LatLng(53.1913032,-6.0824887),//Europe's first
-// 		new google.maps.LatLng(53.410592, -6.234463),//Dublin
-// 	];
-
-// 	var pathToCenter = new google.maps.Polyline({
-// 		path: pathCoordinates,
-// 		geodesic: false,
-// 		strokeColor: '#006400',
-// 		strokeOpacity: 1.0,
-// 		strokeWeight: 2
-// 	});
-
-// 	pathToCenter.setMap(map);
-// }
