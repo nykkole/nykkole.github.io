@@ -5,7 +5,7 @@
     }
 
     #map {
-    	height: 100px;
+    	height: 80px;
     }
 
     #info {
@@ -24,4 +24,75 @@
 	width: 50%
 	margin-left: 1em;
 	margin-bottom: 1em;
+}
+
+#IRE17 {
+    float: left;
+}
+
+#CR17 {
+    float: left;
+}
+
+.tripselection {
+    width: 33%;
+    padding: 5px;
+    position: relative;
+    display: table;
+}
+
+.tripimg {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tripselection:hover .hovertext {
+    visibility: visible;
+    cursor: pointer;
+}
+
+.tripselection:hover .tripimg {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.hovertext {
+    visibility: hidden;
+    display: table-cell;
+    vertical-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); 
+    left: 0;
+    right: 0;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #453a45;
+  font-size: 1em;
+  background: #98d0f5;
+  padding: 6px 10px 6px 10px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+
+#buttons {
+    padding-bottom: 10px;
+    /*text-align: center;*/
+}
+
+
+#legend {
+    display: none;
 }

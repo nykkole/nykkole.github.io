@@ -10,9 +10,28 @@
 	<link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/7/74/Earth_globe.png" />
 </head>
 <body>
+	<!-- 
+		- smaller, narrower map above squares
+		- Bring back menu bar and toggle pins in menu bar to show only pins of one kind
+	-->
 <div class="container">
 	<h1>Roaming the world</h1>
-    <div>
+	<div class="tripselection" id="IRE17" onclick="zoomtoIRE()">
+		<img class="tripimg" src="images/IRE_ladyview.jpg">
+		<p class="hovertext">Ireland 2017</p>
+	</div>
+	<div class="tripselection" id="CR17" onclick="zoomtoCR()">
+		<img class="tripimg" src="images/CR_beach.jpg">
+		<p class="hovertext">Costa Rica 2017</p>
+	</div>
+	<div class="tripselection" id="WA" onclick="zoomtoWA()">
+		<img class="tripimg" src="images/WA_camping.jpg">
+		<p class="hovertext">Camping</p>
+	</div>
+	<div id="buttons">
+		<button class="btn" id="zoomout" onclick="zoomout()">Zoom out</button>
+	</div>
+    <div id="legend">
     	<p>
     		<img id="marker" src="http://maps.google.com/mapfiles/kml/shapes/dining.png" width="3%">Restaurant & Bars &nbsp;
     		<img id="marker" src="http://maps.google.com/mapfiles/kml/shapes/capital_big_highlight.png" width="3%">Castles and other highlights &nbsp;
@@ -21,15 +40,6 @@
     		<img id="marker" src="http://maps.google.com/mapfiles/kml/shapes/campground.png" width="3%">Camping
     	</p>
     </div>
-
-   <!--<div>
-	    <h3>Features to add</h3>
-		<ul>
-			<li>Show image, address and info when clicking on a pin</li>
-			<li>Toggle pins in menu bar to show only pins of one kind</li>
-			<li>Links to zoom into Galway, Kilarney, Kenmare, Kilkenny and Dublin (maybe)</li>
-			</ul>	
-	</div>  -->
 
 	<div id="map"><div>
 	

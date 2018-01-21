@@ -1,15 +1,16 @@
 var map;
+var infowindow;
+
+// cluster pins in WA, CR and IRE when zoomed out
+// change pins to dots until click
+//      https://stackoverflow.com/questions/15523100/google-map-api-v3-change-marker-icon-on-click
+// click event on map to clear infowindow
 
 // --------------------- map and pins
 function initMap() {
 
 	var styles = [
 	  {
-	    stylers: [
-	      {hue: '#193341'},
-	      {saturation: -20}
-	    ]
-	  }, {
 	    featureType: 'road',
 	    elementType: 'geometry',
 	    stylers: [
@@ -110,7 +111,7 @@ function initMap() {
     // Ireland  Aug 17
     {
         heading: "Conolly's Folly",
-        description: 'Geocache and interesting story',
+        description: 'Geocache and interesting story<br><img src="images/IRE_conolly.jpg" alt="Conolly&#34;s Folly" width="300px">',
         position: new google.maps.LatLng(53.3698532,-6.5623387),
         type: 'highlight'
       }, {
@@ -120,7 +121,7 @@ function initMap() {
         type: 'dining'
       }, {
         heading: "The Pie Maker",
-        description: 'Very yummy food and good dark beer!',
+        description: 'Very yummy food and good dark beer!<br><img src="images/IRE_pie.jpg" alt="The Pie Maker" height="300px">',
         position: new google.maps.LatLng(53.2716242,-9.0540488),
         type: 'dining'
       }, {
@@ -130,17 +131,17 @@ function initMap() {
         type: 'sleeping'
       }, {
         heading: "Dunguaire Castle",
-        description: 'Stand under archway and ask a question, you shall have the answer before the end of the day :)',
+        description: 'Stand under archway and ask a question, you shall have the answer before the end of the day :)<br><img src="images/IRE_dunguaire.jpg" alt="Dunguaire Castle" width="300px">',
         position: new google.maps.LatLng(53.1422132,-8.9282717),
         type: 'highlight'
       }, {
         heading: "Hazel Mountain Chocolate",
-        description: 'Very yummy food!',
+        description: 'Very yummy food!<br><img src="images/IRE_chocolate.jpg" alt="Yummy food" width="300px">',
         position: new google.maps.LatLng(53.1262304,-9.0502399),
         type: 'dining'
       }, {
         heading: "Cliffs of Moher",
-        description: 'Beautiful scenery!',
+        description: 'Beautiful scenery!<br><img src="images/IRE_moher.jpg" alt="View of the cliffs" width="300px">',
         position: new google.maps.LatLng(52.9715489,-9.4396372),
         type: 'scenic'
       }, {
@@ -150,42 +151,42 @@ function initMap() {
         type: 'sleeping'
       }, {
         heading: "Celtic Whiskey Bar & Larder",
-        description: 'Go here! Drink whiskey!',
+        description: 'Go here! Drink whiskey!<br><img src="images/IRE_whiskeybar.jpg" alt="Rare whiskey" height="300px">',
         position: new google.maps.LatLng(52.0587019,-9.5115221),
         type: 'dining'
       }, {
         heading: "Geocache in park in Kilarney",
-        description: 'Beautiful park with view of castle',
+        description: 'Beautiful park with view of castle<br><img src="images/IRE_park.jpg" alt="View near the cache" width="300px">',
         position: new google.maps.LatLng(52.046483, -9.538767),
         type: 'scenic'
       }, {
         heading: "Torc Waterfall",
-        description: 'Gorgeous waterfall',
+        description: 'Gorgeous waterfall<br><img src="images/IRE_torc.jpg" alt="Torc Waterfall" height="300px">',
         position: new google.maps.LatLng(52.0044866,-9.507272),
         type: 'scenic'
       }, {
         heading: "Viewpoint: Ladies View",
-        description: 'Gorgeous view',
+        description: 'Gorgeous view<br><img src="images/IRE_ladyview.jpg" alt="The view" width="300px">',
         position: new google.maps.LatLng(51.968600, -9.594750),
         type: 'scenic'
       }, {
         heading: "Avoca",
-        description: 'Very yummy food',
+        description: 'Very yummy food<br><img src="images/IRE_avoca.jpg" alt="Lemon meringue pie" width="300px">',
         position: new google.maps.LatLng(51.9387363,-9.6589553),
         type: 'dining'
       }, {
         heading: "Geocache in Kenmare",
-        description: 'Worth a visit',
+        description: 'Worth a visit<br><img src="images/IRE_kenmare.jpg" alt="On the peninsula" width="300px">',
         position: new google.maps.LatLng(51.877517, -9.571600),
         type: 'scenic'
       }, {
         heading: "The Ewe Experience",
-        description: '<a href="http://www.theewe.com/" target="_blank">Learn more</a>',
+        description: '<a href="http://www.theewe.com/" target="_blank">Learn more</a><br><img src="images/IRE_ewe.jpg" alt="Statue in the garden" width="300px">',
         position: new google.maps.LatLng(51.777426, -9.569102),
         type: 'highlight'
       }, {
         heading: "Kilkenny Castle",
-        description: 'Very interesting caslte tour',
+        description: 'Very interesting caslte tour<br><img src="images/IRE_kilkenny.jpg" alt="Castle gardens" width="300px">',
         position: new google.maps.LatLng(52.6504656,-7.2514866),
         type: 'highlight'
       }, {
@@ -195,22 +196,22 @@ function initMap() {
         type: 'dining'
       }, {
         heading: "Glendalough Monastic Site",
-        description: 'Ruins from the year 800',
+        description: 'Ruins from the year 800<br><img src="images/IRE_glendalough.jpg" alt="The old monastary" height="300px">',
         position: new google.maps.LatLng(53.0119921,-6.3385948),
         type: 'highlight'
       }, {
         heading: "Europe's first cache",
-        description: '!!!',
+        description: '!!!<br><img src="images/IRE_first.jpg" alt="View from the cache" width="300px">',
         position: new google.maps.LatLng(53.1913032,-6.0824887),
         type: 'scenic'
       }, {
         heading: "Guinness Storehouse",
-        description: "It's like Charlie and the Chocolate Factory!",
+        description: "It's like Charlie and the Chocolate Factory!<br><img src='images/IRE_guiness.jpg' alt='View from the top floor' height='200px'>",
         position: new google.maps.LatLng(53.341881, -6.286710),
         type: 'highlight'
       }, {
         heading: "Jameson Distillery Bow St.",
-        description: 'Awesome whiskey tasting!',
+        description: 'Awesome whiskey tasting!<br><img src="images/IRE_jameson.jpg" alt="Learning about the history" width="300px">',
         position: new google.maps.LatLng(53.3483793,-6.2795431),
         type: 'highlight'
       }, {
@@ -335,7 +336,7 @@ function initMap() {
 
 	// ------------------------- from API documentation
 	// https://developers.google.com/maps/documentation/javascript/custom-markers
-	var infowindow = new google.maps.InfoWindow({}); 
+	infowindow = new google.maps.InfoWindow({}); 
 	var markers = [];
 	// function to add pins to map
 	function addMarker(feature) {
@@ -467,3 +468,30 @@ function calcRouteIRE() {
         }
     });
 }
+
+function zoomtoIRE() {
+    infowindow.close();
+    map.setCenter({lat: 52.580, lng: -8.361}); //52.580414, -8.361462
+    map.setZoom(7);
+}
+
+function zoomtoCR(){
+    infowindow.close();
+    map.setCenter({lat: 10.341, lng: -84.875}); //10.341040, -84.875685
+    map.setZoom(9);
+}
+
+function zoomtoWA(){
+    infowindow.close();
+    map.setCenter({lat: 47.680, lng: -122.161}); //47.680027, -122.161136
+    map.setZoom(7);
+}
+
+function zoomout(){
+    infowindow.close();
+    map.setCenter({lat: 38.092, lng: -56.085});  //38.092807, -56.085236
+    map.setZoom(3);
+}
+
+
+
