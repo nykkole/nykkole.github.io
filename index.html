@@ -1,21 +1,128 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<title>Fun stuff from nykkole</title>
-	 <link rel="stylesheet" type="text/css"
-          href="https://fonts.googleapis.com/css?family=Baloo+Bhaina">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>	
+
+<!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Black_book_icon.svg/1000px-Black_book_icon.svg.png" />
+
+    <title>nykkole's portfolio</title>
+
+<!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet">
+
+<!-- STYLE SHEETS -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
-	<div>
-		<h1>Some fun stuff</h1>
-	</div>
-	<div class="float">
-		<ul>
-			<li><a href="places/index.html">Oh, all the places you'll go</a></li>
-			<li><a href="schedule/index.html">Newsletter and chat schedule</a></li>
-			<li><a href="travel/index.html">Our travels</a></li>
-		</ul>
-	</div>
+<!-- PAGE HEADER -->
+    <div id="topfix">
+        <div id="headerWrapper">
+            <header>
+                <h1>nykkole</h1>
+                <p>
+                    <a href="https://www.geocaching.com/profile/?guid=aa08e423-ea31-4a5f-9e87-3de03f41a978&wid=f0ff063b-3251-4a4b-8db0-36a834c0e6a1&ds=2" target="_blank"><img class="geo" src="https://s-media-cache-ak0.pinimg.com/736x/4a/ac/59/4aac59c72248f11d95ad959bd028e87d.jpg"></a>
+                    <a class="icons" href="https://github.com/nykkole" target="_blank"><i class="fa fa-github"></i></a> 
+                    <a class="icons" href="https://www.freecodecamp.com/nykkole" target="_blank"><i class="fa fa-free-code-camp"></i></a>
+                    <a class="icons" href="https://www.linkedin.com/in/nicolejendro/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                </p>
+            </header>
+        </div>
+
+    <!-- PAGE NAVIGATION -->
+        <div id="navWrapper">
+            <nav class="clearfix">
+                <ul>
+                    <li class="active"><a href="#aboutimg">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="mailto:nykkole@gmail.com">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+<!-- PAGE CONTENT -->
+    <main class="clearfix ">
+
+        <div id="aboutimg">
+            <div class="transbox">
+                <h1 class="abouttext" >About me</h1>
+                <p class="abouttext">I work in Community Volunteer Support at Geocaching HQ.</p> <p class="abouttext"> My interests lie in human languages, front-end development, non-profit support.</p>
+            </div>
+        </div>
+        
+        <div id="portfolio" class="anchor">
+            <h2>Portfolio</h2>
+            <hr class="fadeAway">
+            
+            <a href="https://nykkole.github.io/places/index.html" target="_blank">
+                <figure class="photo"> 
+                    <img src="images/alltheplaces.png">
+                    <figcaption>Map places around the world</figcaption>
+                </figure>
+            </a>
+
+            <a href="https://nykkole.github.io/schedule/index.html" target="_blank">
+                <figure class="photo"> 
+                    <img src="images/schedule.png" alt="Website to create a schedule.">
+                    <figcaption>Create a schedule</figcaption>
+                </figure>
+            </a>
+
+            <a href="https://nykkole.github.io/travel/index.html" target="_blank">
+                <figure class="photo"> 
+                    <img src="images/roaming.png">
+                    <figcaption>Vacation destinations</figcaption>
+                </figure>
+            </a>
+
+            <a href="https://nykkole.github.io/" target="_blank">
+                <figure class="photo"> 
+                    <img src="images/portfolio.png">
+                    <figcaption>Portfolio</figcaption>
+                </figure>
+            </a>
+        </div>
+
+        <div id="skills" class="anchor">
+            <h2>Skills</h2>
+            <hr class="fadeAway">
+
+            <table>
+              <tr>
+                <td>
+                  <ul>
+                    <li>HTML</li>
+                    <li>JavaScript</li>
+                    <li>Project Management</li>
+                    <li>Business Development</li>
+                    <li>Content Management</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>English</li>
+                    <li>German</li>
+                    <li>French</li>
+                    <li>Russian</li>
+                    <li>Mandarin</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+        </div>
+
+    </main>
+
+<!-- PAGE FOOTER -->
+    <div id="footerWrapper">
+        <footer>
+        <p><a href="mailto:nykkole@gmail.com">nykkole@gmail.com</a></p>
+        </footer>
+    </div>
+<!-- </div> -->
 </body>
 </html>

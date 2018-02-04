@@ -6,6 +6,7 @@
 
     #map {
     	height: 80px;
+        border: 1px solid #000000;
     }
 
     #info {
@@ -13,10 +14,15 @@
     }
 }
 
+#container {
+    position: relative;
+}
+
 #map {
-	height: 550px;
-	/*width: 50%;*/
-    margin-bottom: 1em;
+	height: 600px;
+    width: 100%;
+    float: left;
+    margin-top: 5px;
 }
 
 #info {
@@ -35,7 +41,8 @@
 }
 
 .tripselection {
-    width: 33%;
+    width: 30%;
+    height: 100%;
     padding: 5px;
     position: relative;
     display: table;
@@ -65,19 +72,23 @@
     transform: translateY(-50%); 
     left: 0;
     right: 0;
-    font-size: 30px;
+    font-size: 1.5em;
     text-align: center;
     font-weight: bold;
 }
 
+#zoomout:hover {
+    cursor: pointer;
+    color: darkblue;
+}
+
 .btn {
-  -webkit-border-radius: 10;
-  -moz-border-radius: 10;
   border-radius: 10px;
   font-family: Arial;
   color: #453a45;
   font-size: 1em;
-  background: #98d0f5;
+  /*background: #98d0f5;*/
+  background: white;
   padding: 6px 10px 6px 10px;
   text-decoration: none;
 }
@@ -89,10 +100,22 @@
 
 #buttons {
     padding-bottom: 10px;
-    /*text-align: center;*/
+    padding-top: 10px;
+    padding-left: 5px;
+    position: absolute;
 }
 
-
 #legend {
+    display: none;
+}
+
+#photos {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    position: relative;
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
     display: none;
 }

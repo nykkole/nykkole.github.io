@@ -16,21 +16,21 @@
 	-->
 <div class="container">
 	<h1>Roaming the world</h1>
-	<div class="tripselection" id="IRE17" onclick="zoomtoIRE()">
-		<img class="tripimg" src="images/IRE_ladyview.jpg">
-		<p class="hovertext">Ireland 2017</p>
-	</div>
-	<div class="tripselection" id="CR17" onclick="zoomtoCR()">
-		<img class="tripimg" src="images/CR_beach.jpg">
-		<p class="hovertext">Costa Rica 2017</p>
-	</div>
-	<div class="tripselection" id="WA" onclick="zoomtoWA()">
-		<img class="tripimg" src="images/WA_camping.jpg">
-		<p class="hovertext">Camping</p>
-	</div>
-	<div id="buttons">
-		<button class="btn" id="zoomout" onclick="zoomout()">Zoom out</button>
-	</div>
+	<!-- <div id="trips"> -->
+		<div class="tripselection" id="IRE17" onclick="zoomtoIRE()">
+			<img class="tripimg" src="images/IRE_ladyview.jpg">
+			<p class="hovertext">Ireland 2017</p>
+		</div>
+		<div class="tripselection" id="CR17" onclick="zoomtoCR()">
+			<img class="tripimg" src="images/CR_beach.jpg">
+			<p class="hovertext">Costa Rica 2017</p>
+		</div>
+		<div class="tripselection" id="WA" onclick="zoomtoWA()">
+			<img class="tripimg" src="images/WA_camping.jpg">
+			<p class="hovertext">Camping</p>
+		</div>
+	<!-- </div> -->
+
     <div id="legend">
     	<p>
     		<img id="marker" src="http://maps.google.com/mapfiles/kml/shapes/dining.png" width="3%">Restaurant & Bars &nbsp;
@@ -41,13 +41,20 @@
     	</p>
     </div>
 
-	<div id="map"><div>
+	<div id="map"></div>
+	<div id="buttons">
+		<button class="btn" id="zoomout" onclick="zoomout()">Zoom out</button>
+	</div>
+	<div id="photos"></div>
 	
 
 <!-- jQuery -->
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <!-- main.js -->
 	<script type="text/javascript" src="js/main.js"></script>
+<!-- markerClusterer library -->
+	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+    </script>
 <!-- Google API -->
 <!-- view api settings and key here console.developers.google.com/apis -->
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA42wF9OBnto7aBIDgDyz1mZWmOpnk2SoE&callback=initMap"

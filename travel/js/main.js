@@ -1,9 +1,14 @@
 var map;
 var infowindow;
+var markerCluster;
 
 // cluster pins in WA, CR and IRE when zoomed out
+// https://developers.google.com/maps/documentation/javascript/marker-clustering
+
 // change pins to dots until click
+// WORK ON 368
 //      https://stackoverflow.com/questions/15523100/google-map-api-v3-change-marker-icon-on-click
+
 // click event on map to clear infowindow
 
 // --------------------- map and pins
@@ -42,7 +47,7 @@ function initMap() {
     var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
     //http://kml4earth.appspot.com/icons.html
     var icons = {
-      scenic: iconBase + 'parks_maps.png',
+      scenic: 'https://maps.google.com/mapfiles/kml/pal2/icon4.png',
       dining: iconBase + 'dining_maps.png',
       highlight: iconBase + 'capital_big_highlight_maps.png',
       sleeping: iconBase + 'lodging_maps.png',
@@ -187,7 +192,7 @@ function initMap() {
       }, {
         heading: "Kilkenny Castle",
         description: 'Very interesting caslte tour<br><img src="images/IRE_kilkenny.jpg" alt="Castle gardens" width="300px">',
-        position: new google.maps.LatLng(52.6504656,-7.2514866),
+        position: new google.maps.LatLng(52.650729, -7.250017),
         type: 'highlight'
       }, {
         heading: "Tynan's Bridge House Bar",
@@ -222,7 +227,7 @@ function initMap() {
       }, {
         heading: "Third Space Smithfield",
         description: 'Cafe near Jameson Distillery',
-        position: new google.maps.LatLng(53.3478248,-6.2790488),
+        position: new google.maps.LatLng(53.347705, -6.278770),
         type: 'dining'
       }, {
         heading: "Christchurch Car Park",
@@ -361,6 +366,7 @@ function initMap() {
 	    		content: contentString,
 	  		});
 	     	infowindow.open(map, this);
+            marker.setIcon('https://www.google.com/mapfiles/marker_green.png'); //change image to relevant icon
 	  	 });
 
 		markers.push(marker);
@@ -382,10 +388,16 @@ function initMap() {
 		}
 	};
 
+    
 	//drawPolyline(map);
     calcRouteIRE(map);
     calcRouteCR(map);
 	populateMap();
+
+    var mcOptions = {gridSize: 1, maxZoom: 11};
+    markerCluster = new MarkerClusterer(map, markers,
+        {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}, mcOptions);
+
 };
 
 function calcRouteCR() {
@@ -469,10 +481,10 @@ function calcRouteIRE() {
     });
 }
 
-function zoomtoIRE() {
+function zoomtoIRE() { 
     infowindow.close();
     map.setCenter({lat: 52.580, lng: -8.361}); //52.580414, -8.361462
-    map.setZoom(7);
+    map.setZoom(8);
 }
 
 function zoomtoCR(){
@@ -484,7 +496,7 @@ function zoomtoCR(){
 function zoomtoWA(){
     infowindow.close();
     map.setCenter({lat: 47.680, lng: -122.161}); //47.680027, -122.161136
-    map.setZoom(7);
+    map.setZoom(8);
 }
 
 function zoomout(){

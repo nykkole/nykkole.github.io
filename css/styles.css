@@ -1,0 +1,288 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* $primaryColor: #66000a;
+$secondaryColor: #ccccb8;
+$fontColor: #331912;
+$accent: #8c8c38; */
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/*  apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 16px; }
+  body h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    padding-bottom: 0.5rem; }
+
+#topfix {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3000; }
+
+div#headerWrapper {
+  background-color: #2d5d2f; }
+
+header {
+  color: #4b9742;
+  padding: 0.5rem 2%; }
+  header h2 {
+    font-size: 1.1rem;
+    font-weight: 300; }
+  header img.geo {
+    width: 0.5rem; }
+  header a {
+    text-decoration: none;
+    color: #3f351e; }
+  header a:hover {
+    color: white; }
+
+div#navWrapper {
+  background-color: #4b9742;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); }
+
+nav ul li {
+  float: left;
+  width: 25%;
+  border-right: 1px solid rgba(0, 0, 0, 0.3); }
+nav ul li:last-child {
+  border-right: none; }
+nav ul li a {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  padding: 0.5rem 0;
+  color: #3f351e;
+  text-decoration: none;
+  transition: background 0.75s ease, color  0.75s ease; }
+nav ul li.active a {
+  background-color: #397432; }
+nav ul li a:hover {
+  color: #4b9742;
+  background-color: #2d5d2f; }
+
+main {
+  background-color: white; }
+  main figure.banner {
+    width: 100%; }
+    main figure.banner img {
+      width: 100%; }
+  main h1 {
+    margin: 1rem 0 0 2%;
+    color: #2d5d2f; }
+  main h2 {
+    font-size: 1.5rem;
+    margin: 0.75rem 0 0 2%;
+    color: #3e7f40; }
+  main h3 {
+    font-size: 1.2rem;
+    color: #4ea252; }
+  main p {
+    line-height: 130%;
+    color: #3f351e;
+    padding: 0.5rem; }
+  main a {
+    text-decoration: none; }
+  main #aboutimg {
+    background: url("http://www.publicdomainpictures.net/pictures/180000/nahled/wald-am-morgen.jpg");
+    min-height: 25rem;
+    /* Parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  main div.transbox {
+    vertical-align: center;
+    text-align: center;
+    position: absolute;
+    min-height: 8rem;
+    top: 12%;
+    left: 0;
+    right: 0;
+    margin: 0 5rem 0 5rem;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6; }
+  main h1.abouttext {
+    color: #3f351e; }
+  main .abouttext {
+    font-weight: 700; }
+  main hr.fadeAway {
+    background: linear-gradient(to right, #424e64 0%, rgba(66, 78, 100, 0) 100%);
+    height: 2px;
+    border: none;
+    margin: 0 2%; }
+  main figure.photo {
+    width: 96%;
+    margin: 0.5rem 2%;
+    padding: 0.5rem; }
+    main figure.photo img {
+      width: 100%;
+      border: 1px solid #2d5d2f; }
+    main figure.photo figcaption {
+      text-align: center;
+      color: #2d5d2f; }
+  main .anchor {
+    padding-top: 1.5rem;
+    display: block; }
+  main #skills {
+    clear: both;
+    padding-bottom: 2rem; }
+  main table {
+    margin: auto;
+    width: 50%; }
+
+div#footerWrapper {
+  background-color: #2d5d2f; }
+
+footer {
+  width: 100%; }
+  footer p {
+    text-align: center;
+    color: #4b9742;
+    padding: 0.75rem 0;
+    font-size: 0.9rem; }
+  footer p a {
+    color: #4b9742; }
+
+/*------ Clearfix: Force an Element not to collapse --------- */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media only screen and (min-width: 35rem) {
+  main figure.photo {
+    width: 46%;
+    float: left; }
+    main figure.photo img {
+      width: 100%; }
+  main div.transbox {
+    top: 25%; } }
+@media only screen and (min-width: 60rem) {
+  body {
+    background-image: url(../images/polonez_car.png); }
+
+  nav, main {
+    max-width: 60rem;
+    margin: auto;
+    /*box-shadow: 0 0 10px #000000;*/ }
+
+  nav ul {
+    margin-left: 2%;
+    border-left: 1px solid rgba(0, 0, 0, 0.3); }
+    nav ul li {
+      width: auto; }
+      nav ul li a {
+        padding: 0.5rem 1rem; }
+    nav ul li:last-child {
+      border-right: 1px solid rgba(0, 0, 0, 0.3); }
+
+  main figure.photo {
+    width: 46%;
+    float: left;
+    max-height: auto; }
+    main figure.photo img {
+      width: 100%; }
+  main div.transbox {
+    top: 30%;
+    width: 70%;
+    margin: auto; } }
+
+/*# sourceMappingURL=styles.css.map */
