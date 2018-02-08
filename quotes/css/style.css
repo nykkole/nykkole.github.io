@@ -1,0 +1,64 @@
+body {
+	font-family: Sans-Serif;
+}
+
+#box {
+	background-color: white;
+	border-radius: 5px;
+	position: relative;
+	padding: 2em;
+	margin: 12em auto auto auto;
+	min-width: 30%;
+	max-width: 40%;
+	/*min-height: 200px;*/
+	/*display: flex;*/
+	/*overflow: auto;*/
+}
+
+#quoteBox {
+	/*position: absolute;*/
+	top: 10px;
+	left: 10px;
+	height: auto;
+	/*width: 500px;*/
+	padding: 0 1.5em 0 1.5em;
+	display: block;
+}
+
+#quoteText {
+	font-size: 1.5em;
+	margin-bottom: 0;
+}
+
+#quoteAuthor {
+	font-size: 1em;
+	text-align: right;
+	padding-right: 4em;
+	padding-bottom: 1em;
+	margin-top: 0;
+}
+
+#buttons {
+	
+}
+
+#getQuoteButton {
+	position: absolute;
+	bottom:10px;
+	right:10px;
+	float: right;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 1.5em;
+	color: white;
+}
+
+#getQuoteButton:focus {
+	background-color: #ff0000;
+	outline:0;
+}
+
+#getQuoteButton:hover {
+	background-color: #c10000;
+	cursor: pointer;
+}
