@@ -38,8 +38,20 @@ body {
 	margin-top: 0;
 }
 
-#buttons {
-	
+.twitter-share-button {
+	position: relative;
+	bottom: -10px;
+	left: -10px;
+	padding: 0.5em;
+	color: white;
+}
+
+.tumbler-share-button {
+	position: relative;
+	bottom: -10px;
+	left: -10px;
+	padding: 0.5em 0.75em 0.5em 0.75em;
+	color: white;
 }
 
 #getQuoteButton {
