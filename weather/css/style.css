@@ -1,0 +1,29 @@
+body {
+	background-color: lightblue;
+	padding: 3em;
+	font-family: sans-serif;
+	text-align: center;
+	color: white;
+}
+
+h1 {
+	font-size: 4rem;
+	/*margin: auto;*/
+}
+
+p {
+	/*margin: auto;*/
+	font-size: 2rem;
+}
+
+div {
+	margin: auto;
+}
+
+#scale {
+	color: blue;
+}
+
+img {
+	width: 15%;
+}
