@@ -1,0 +1,66 @@
+body {
+	background-color: darkgreen;
+	font-family: sans-serif;
+	text-align: center;
+	color: white;
+}
+
+#startText {
+	padding-top: 5rem;
+}
+
+input {
+	border-radius: 5px;
+	border: none;
+	height: 2rem;
+	width: 20%;
+	font-size: 2rem;
+	color: black;
+	font-weight: bold;
+	background-color: white;
+}
+
+p {
+	font-size: 2rem;
+}
+
+#search {
+	margin-top: 0;
+}
+
+#random {
+	font-size: 1rem;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+div {
+	margin: auto;
+}
+
+#errors {
+	font-size: 1rem;
+	color: red;
+}
+
+#results {
+	text-align: left;
+}
+
+#snippet {
+	background-color: white;
+	color: black;
+	border-radius: 5px;
+	margin: 1rem;
+	padding: 0.5rem;
+}
+#snippet p {
+		font-size: 1rem;
+	}
+
+#title {
+	font-size: 2rem;
+}

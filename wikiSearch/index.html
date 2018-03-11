@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search Wikipedia</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="startText">
+		<!-- magnifying glass icon -->
+		<form id="searchForm">
+			<!-- execute on click or on enter -->
+			<input type="text" id="keyword" autocomplete="off">
+		</form>
+		<div><p id="errors"></p></div>
+		<p id="search" onclick="searchWiki()">Search</p>
+		<p id="random"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"> Click here for a random article</a></p>
+	</div>
+
+	<div id="results">
+		
+	</div>
+
+<!-- jQuery -->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<!-- main.js -->
+	<script type="text/javascript" src="js/main.js"></script>
+<!-- AJAX -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>
