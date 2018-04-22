@@ -1,0 +1,106 @@
+body {
+	margin: 0;
+ 	padding: 0;
+ 	border: 0;
+	outline: 0;
+	font-family: sans-serif;
+	font-size: 100%;
+ 	vertical-align: baseline;
+ 	background: transparent; }
+}
+
+/* ------ PAGE HEADER --------- */
+#topfix {
+  	position: fixed;
+  	top: 0;
+  	width: 100%;
+  	z-index: 3000; 
+}
+
+header {
+  	color: #4b9742;
+  	padding: 0.5rem 2%; 
+}
+
+div#headerWrapper {
+  	background-color: #2d5d2f; 
+}
+
+div#navWrapper {
+  	background-color: #4b9742;
+  	border-bottom: 1px solid rgba(0, 0, 0, 0.3); 
+}
+
+/* ------ Clearfix: Force an Element not to collapse --------- */
+.clearfix:after {
+  	content: "";
+  	display: table;
+  	clear: both; 
+}
+
+nav ul {
+  	list-style: none;
+  	margin: 0; 
+}
+
+nav ul li {
+  	float: left;
+  	width: 20%;
+  	border-right: 1px solid rgba(0, 0, 0, 0.3); 
+  	display: block;
+  	text-align: center;
+  	font-weight: 700;
+  	padding: 0.5rem 0;
+  	color: #3f351e;
+  	text-decoration: none;
+  	transition: background 0.75s ease, color  0.75s ease;
+}
+nav ul li:last-child {
+  	border-right: none; 
+}
+
+.active {
+  	background-color: #397432; 
+}
+nav ul li:hover {
+  	color: #4b9742;
+  	background-color: #2d5d2f; 
+}
+
+/* --------- PAGE CONTENT --------- */
+
+.station {
+	width: 80%;
+	margin: auto;
+	border-style: solid;
+	padding: 2em;
+}
+
+.station:hover {
+  width: 85%;
+  transition: 0.25s;
+}
+
+.live {
+  background-color: #4b9742;
+  border-color: black;
+  color: white;
+}
+
+.hide {
+  display: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: blue;
+}
+
+span {
+  font-weight: bold;
+  float: right;
+  text-decoration: underline;
+}

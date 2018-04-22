@@ -58,6 +58,16 @@ function initMap() {
     var places = [
     //Camping trips
     {
+        heading: 'Wenberg county park, April 2018',
+        description: 'Well-funded campground near Lake Goodwin (no alcohol policy)',
+        position: new google.maps.LatLng(48.137409, -122.289359),
+        type: 'camping'
+      }, {
+        heading: 'Fort Ebey, April 2018',
+        description: 'WA state park with hiking trails and gorgeous views',
+        position: new google.maps.LatLng(48.222825, -122.765617),
+        type: 'camping'
+      }, {
         heading: 'Millersylvania, Jan 2018',
         description: 'National park with a lake and an old orchard',
         position: new google.maps.LatLng(46.912214, -122.911650),
