@@ -1,6 +1,6 @@
 var map;
 var infowindow;
-var markerCluster;
+//var markerCluster;
 
 // cluster pins in WA, CR and IRE when zoomed out
 // https://developers.google.com/maps/documentation/javascript/marker-clustering
@@ -376,7 +376,7 @@ function initMap() {
 	    		content: contentString,
 	  		});
 	     	infowindow.open(map, this);
-            marker.setIcon('https://www.google.com/mapfiles/marker_green.png'); //change image to relevant icon
+            //marker.setIcon('https://www.google.com/mapfiles/marker_green.png'); //change image to different icon
 	  	 });
 
 		markers.push(marker);
@@ -405,8 +405,8 @@ function initMap() {
 	populateMap();
 
     var mcOptions = {gridSize: 1, maxZoom: 11};
-    markerCluster = new MarkerClusterer(map, markers,
-        {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}, mcOptions);
+    //markerCluster = new MarkerClusterer(map, markers,
+    //    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}, mcOptions);
 
 };
 
@@ -475,7 +475,7 @@ function calcRouteIRE() {
     {location: 'Glengarriff'},
     {location: 'Blarney'},
     {location: 'Kilkenny'},
-    {location: 'Glendalough'},
+    {location: 'Glendalough Ireland'},
     {location: 'Bray'},
     {location: 'Christchurch Car Park, Werburgh Street, Wood Quay, Dublin 8, Ireland'}
     ],
