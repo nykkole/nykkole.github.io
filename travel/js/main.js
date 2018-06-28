@@ -73,17 +73,17 @@ function initMap() {
         position: new google.maps.LatLng(46.912214, -122.911650),
         type: 'camping'
       }, {
-        heading: 'Belfair State Park, Oct 14 2017',
+        heading: 'Belfair State Park, Oct 2017',
         description: 'Waterside camping',
         position: new google.maps.LatLng(47.429605, -122.878229),
         type: 'camping'
       }, {
-        heading: 'Dash Point State Park, Nov 17 2017',
+        heading: 'Dash Point State Park, Nov 2017',
         description: 'Camping near the sound',
         position: new google.maps.LatLng(47.318974, -122.408130),
         type: 'camping'
       }, {
-        heading: 'Kanaskat-Palmer State Park, Oct 7 2017',
+        heading: 'Kanaskat-Palmer State Park, Oct 2017',
         description: 'Camping along a river with salmons',
         position: new google.maps.LatLng(47.319986, -121.904917),
         type: 'camping'
@@ -93,14 +93,14 @@ function initMap() {
         position: new google.maps.LatLng(47.444916, -120.318303),
         type: 'camping'
       }, {
-        heading: 'Friday Creek campground, Sep 3 2016',
+        heading: 'Friday Creek campground, Sep 2016',
         description: 'Gorgeous trees and a small creek',
         position: new google.maps.LatLng(48.582519, -122.340627),
         type: 'camping'
       }, {
-        heading: 'Hemple Creek campground, May 2017',
+        heading: 'Gold Basin campground, May 2017',
         description: 'Camping right by a river with a small beach',
-        position: new google.maps.LatLng(48.078848, -121.745540),
+        position: new google.maps.LatLng(48.076546, -121.731436),
         type: 'camping'
       }, {
         heading: 'Olympia Campground, Sep 2016',
@@ -113,7 +113,7 @@ function initMap() {
         position: new google.maps.LatLng(48.066313, -124.114836),
         type: 'camping'
       }, {
-        heading: 'Secet camping spot',
+        heading: 'Secet camping spot, June 2018',
         description: 'Camping along the river',
         position: new google.maps.LatLng(48.069147, -121.669201),
         type: 'camping'
