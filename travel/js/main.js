@@ -113,9 +113,9 @@ function initMap() {
         position: new google.maps.LatLng(48.066313, -124.114836),
         type: 'camping'
       }, {
-        heading: '',
-        description: '',
-        position: new google.maps.LatLng(),
+        heading: 'Secet camping spot',
+        description: 'Camping along the river',
+        position: new google.maps.LatLng(48.069147, -121.669201),
         type: 'camping'
       }, {
         heading: '',
