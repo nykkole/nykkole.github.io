@@ -40,8 +40,12 @@
     float: left;
 }
 
+#AU17 {
+    float: left;
+}
+
 .tripselection {
-    width: 30%;
+    width: 25%;
     height: 100%;
     padding: 5px;
     position: relative;

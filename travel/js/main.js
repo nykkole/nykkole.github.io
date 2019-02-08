@@ -346,6 +346,128 @@ function initMap() {
         description: 'Nice hostel!', 
         position: new google.maps.LatLng(9.934595, -84.097172),
         type: 'sleeping'
+      },
+       // Australia Now 18
+      {
+        heading: "AirBnB",
+        description: 'Apartment with Bema06 during Mega', 
+        position: new google.maps.LatLng(-37.786351, 144.941317),
+        type: 'sleeping'
+      }, {
+        heading: "First cache on Big Day Out",
+        description: '4WDing up the hill', 
+        position: new google.maps.LatLng(-37.927477, 146.820242),
+        type: 'scenic'
+      }, {
+        heading: "Picnic at Licola Village",
+        description: 'Point where the group split', 
+        position: new google.maps.LatLng(-37.628113, 146.623675),
+        type: 'scenic'
+      }, {
+        heading: "Jamieson Berries",
+        description: 'Ice cream!', 
+        position: new google.maps.LatLng(-37.279378, 146.141121),
+        type: 'dining'
+      }, {
+        heading: "Mt Buller",
+        description: 'Parrots and Webcame Cache', 
+        position: new google.maps.LatLng(-37.146562, 146.447093),
+        type: 'scenic'
+      }, {
+        heading: "Victoria's first cache",
+        description: '..and lots of kangaroos', 
+        position: new google.maps.LatLng(-37.254879, 145.167246),
+        type: 'scenic'
+      }, {
+        heading: "AirBnB",
+        description: '', 
+        position: new google.maps.LatLng(-37.786351, 144.941317),
+        type: 'sleeping'
+      }, {
+        heading: "Torquay surf beach",
+        description: 'surfing lesson without sharks', 
+        position: new google.maps.LatLng(-38.342916, 144.318708),
+        type: 'highlight'
+      }, {
+        heading: "Sunshine Chinese Massage",
+        description: 'so relaxing!', 
+        position: new google.maps.LatLng(-38.331686, 144.324414),
+        type: 'scenic'
+      }, {
+        heading: "Tiny house",
+        description: 'Our first night in a tiny house', 
+        position: new google.maps.LatLng(-38.320999, 144.323412),
+        type: 'scenic'
+      }, {
+        heading: "Cafe La Hoot",
+        description: 'Coffee break on the way to Warnambook', 
+        position: new google.maps.LatLng(-38.240196, 143.990747),
+        type: 'dining'
+      }, {
+        heading: "Botanic Cafe on the Lake",
+        description: 'Coffee break on the way to Warnambook', 
+        position: new google.maps.LatLng(38.333022, 143.587184),
+        type: 'dining'
+      }, {
+        heading: "Mt Leura outlook",
+        description: 'EarthCache', 
+        position: new google.maps.LatLng(-38.244420, 143.157672),
+        type: 'scenic'
+      }, {
+        heading: "Lake Bullen and Gnotuk outlook",
+        description: 'EarthCache', 
+        position: new google.maps.LatLng(-38.235240, 143.112182),
+        type: 'scenic'
+      }, {
+        heading: "Hopkins Falls",
+        description: 'EarthCache', 
+        position: new google.maps.LatLng(-38.333693, 142.619509),
+        type: 'highlight'
+      }, {
+        heading: "Tower Hill Wildlife reserve",
+        description: 'Park on an island with lots of wildlife', 
+        position: new google.maps.LatLng(-38.321018, 142.359777),
+        type: 'highlight'
+      }, {
+        heading: "Deep Blue Hot Springs",
+        description: 'Relaxing hot pool in a hotel', 
+        position: new google.maps.LatLng(-38.396787, 142.473525),
+        type: 'highlight'
+      }, {
+        heading: "The Grotto",
+        description: 'Impressive geological formation', 
+        position: new google.maps.LatLng(-38.618625, 142.914390),
+        type: 'highlight'
+      }, {
+        heading: "London Bridge",
+        description: 'Impressive geological formation', 
+        position: new google.maps.LatLng(-38.622630, 142.931726),
+        type: 'scenic'
+      }, {
+        heading: "12 Apostels",
+        description: 'Impressive geological formation', 
+        position: new google.maps.LatLng(-38.666213, 143.104180),
+        type: 'scenic'
+      }, {
+        heading: "Gully glows",
+        description: 'Glow worms in a park', 
+        position: new google.maps.LatLng(-38.697567, 143.369433),
+        type: 'highlight'
+      }, {
+        heading: "Lavers Hill Roadside Tavern",
+        description: 'Food, gas, and souvenirs', 
+        position: new google.maps.LatLng(-38.682703, 143.385780),
+        type: 'dining'
+      }, {
+        heading: "Cape Otway Lighthouse",
+        description: 'Lighthouse park, with koalas nearby', 
+        position: new google.maps.LatLng(-38.855871, 143.513414),
+        type: 'scenic'
+      }, {
+        heading: "Stone beach",
+        description: 'Gorgous stone beach hidden behind bushes', 
+        position: new google.maps.LatLng(-38.721514, 143.727078),
+        type: 'scenic'
       }
     ];
 
@@ -448,7 +570,7 @@ function calcRouteCR() {
         if (status == google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(result);
         } else {
-            alert('Could not calculate directions because: ' + status);
+            alert('Could not calculate calcRouteCR directions because: ' + status);
         }
     });
 }
@@ -468,7 +590,7 @@ function calcRouteIRE() {
     {location: 'Kilbeggan Distillery Experience'},
     {location: 'Galway'},
     {location: 'Doolin'},
-    {location: 'Cliffs of Moher'},
+    // {location: 'Cliffs of Moher'} //issues with loading route
     {location: 'Ennis Ireland'},
     {location: 'Kilarney'},
     {location: 'Eirk, Molls Gap, County Kerry, Ireland'},
@@ -501,6 +623,12 @@ function zoomtoCR(){
     infowindow.close();
     map.setCenter({lat: 10.341, lng: -84.875}); //10.341040, -84.875685
     map.setZoom(9);
+}
+
+function zoomtoAU(){
+    infowindow.close();
+    map.setCenter({lat: -38.216, lng: 144.458}); //-38.216526, 144.458635
+    map.setZoom(8);
 }
 
 function zoomtoWA(){
