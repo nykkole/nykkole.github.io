@@ -32,8 +32,8 @@ function initMap() {
 	];
 
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 38.092, lng: -56.085},  //38.092807, -56.085236
-        zoom: 3,
+        center: {lat: 15.092, lng: 10.000},  //38.092807, -56.085236
+        zoom: 2.25,
         zoomControl: true,
         mapTypeControl: false,
         scaleControl: true,
@@ -113,9 +113,29 @@ function initMap() {
         position: new google.maps.LatLng(48.066313, -124.114836),
         type: 'camping'
       }, {
-        heading: 'Secet camping spot, June 2018',
+        heading: 'Secret camping spot, June 2018',
         description: 'Camping along the river',
         position: new google.maps.LatLng(48.069147, -121.669201),
+        type: 'camping'
+      }, {
+        heading: 'Three River Resorts, July 2018',
+        description: 'Cabin with outside firepit',
+        position: new google.maps.LatLng(47.913241, -124.534123),
+        type: 'camping'
+      }, {
+        heading: 'Lost Resort, July 2018',
+        description: 'Cabin in the middle of the woods',
+        position: new google.maps.LatLng(48.153682, -124.658083),
+        type: 'camping'
+      }, {
+        heading: 'Near Lake Pend Oreille, Aug 2018',
+        description: 'Birthday camping',
+        position: new google.maps.LatLng(48.258898, -116.472774),
+        type: 'camping'
+      }, {
+        heading: 'Secret camping spot, Sept 2018',
+        description: 'Camping along the river',
+        position: new google.maps.LatLng(48.0690, -121.6692),
         type: 'camping'
       }, {
         heading: '',
@@ -347,7 +367,7 @@ function initMap() {
         position: new google.maps.LatLng(9.934595, -84.097172),
         type: 'sleeping'
       },
-       // Australia Now 18
+       // Australia Nov 18
       {
         heading: "AirBnB",
         description: 'Apartment with Bema06 during Mega', 
@@ -406,7 +426,7 @@ function initMap() {
       }, {
         heading: "Botanic Cafe on the Lake",
         description: 'Coffee break on the way to Warnambook', 
-        position: new google.maps.LatLng(38.333022, 143.587184),
+        position: new google.maps.LatLng(-38.333022, 143.587184),
         type: 'dining'
       }, {
         heading: "Mt Leura outlook",
@@ -468,6 +488,18 @@ function initMap() {
         description: 'Gorgous stone beach hidden behind bushes', 
         position: new google.maps.LatLng(-38.721514, 143.727078),
         type: 'scenic'
+      }, 
+      // India 2019
+      {
+        heading: "Treebo",
+        description: 'First hotel in India', 
+        position: new google.maps.LatLng(18.965424, 72.818499),
+        type: 'sleeping'
+      }, {
+        heading: "The Park",
+        description: 'First hotel in Hyderabad', 
+        position: new google.maps.LatLng(17.423298, 78.462541),
+        type: 'sleeping'
       }
     ];
 
@@ -524,12 +556,13 @@ function initMap() {
 	//drawPolyline(map);
     calcRouteIRE(map);
     calcRouteCR(map);
+    calcRouteAUS(map);
 	populateMap();
 
-    var mcOptions = {gridSize: 1, maxZoom: 11};
-    //markerCluster = new MarkerClusterer(map, markers,
-    //    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}, mcOptions);
-
+//Cluster
+//https://googlemaps.github.io/js-marker-clusterer/docs/reference.html
+    // var mcOptions = {gridSize: 20, maxZoom: 5, imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'};
+    // markerCluster = new MarkerClusterer(map, markers, mcOptions);
 };
 
 function calcRouteCR() {
@@ -590,7 +623,7 @@ function calcRouteIRE() {
     {location: 'Kilbeggan Distillery Experience'},
     {location: 'Galway'},
     {location: 'Doolin'},
-    // {location: 'Cliffs of Moher'} //issues with loading route
+    {location: 'Cliffs of Moher, County Clare, Ireland'}, //previously issue with loading route
     {location: 'Ennis Ireland'},
     {location: 'Kilarney'},
     {location: 'Eirk, Molls Gap, County Kerry, Ireland'},
@@ -608,7 +641,48 @@ function calcRouteIRE() {
         if (status == google.maps.DirectionsStatus.OK) {
             directionsDisplay.setDirections(result);
         } else {
-            alert('Could not calculate directions because: ' + status);
+            alert('Could not calculate IRE directions because: ' + status);
+        }
+    });
+}
+
+function calcRouteAUS() {
+    var directionsService = new google.maps.DirectionsService();
+    var directionsDisplay = new google.maps.DirectionsRenderer({});
+    directionsDisplay.setMap(map);
+    directionsDisplay.setOptions({suppressMarkers: true});
+    directionsDisplay.setOptions({preserveViewport: true});
+
+    var start = 'Yates Ln, Parkville VIC, 3052';
+    var end = 'Yates Ln, Parkville VIC, 3052';
+    var request = {
+        origin: start,
+        waypoints: [
+        {location: '-37.927477, 146.820242'}, //First cache on Big Day Out
+        {location: 'Licola VIC, Australia'},
+        {location: 'Mt Buller'},
+        {location: '-37.254879, 145.167246'}, //Victoria's first cache
+        {location: 'Yates Ln, Parkville VIC, 3052'},
+        {location: 'Torquay surf beach'},
+        {location: 'Sunshine Chinese Massage'},
+        {location: 'Cafe La Hoot'},
+        {location: 'Camperdown Botanic Gardens'},
+        {location: 'Hopkins Falls'},
+        {location: 'Tower Hill Wildlife reserve'},
+        {location: 'Deep Blue Hotel & Hot Springs'},
+        {location: 'The Grotto, Peterborough VIC, Australia'},
+        {location: 'Melba Gully, Great Otway National Park'},
+        {location: 'Cape Otway Lighthouse'},
+        {location: 'Lorne'},
+        ],
+        destination: end,
+        travelMode: google.maps.TravelMode.DRIVING //default
+    };
+    directionsService.route(request, function(result, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+            directionsDisplay.setDirections(result);
+        } else {
+            alert('Could not calculate calcRouteAUS directions because: ' + status);
         }
     });
 }
@@ -627,7 +701,7 @@ function zoomtoCR(){
 
 function zoomtoAU(){
     infowindow.close();
-    map.setCenter({lat: -38.216, lng: 144.458}); //-38.216526, 144.458635
+    map.setCenter({lat: -38.016, lng: 144.458}); //-38.016526, 144.458635
     map.setZoom(8);
 }
 
@@ -639,9 +713,7 @@ function zoomtoWA(){
 
 function zoomout(){
     infowindow.close();
-    map.setCenter({lat: 38.092, lng: -56.085});  //38.092807, -56.085236
-    map.setZoom(3);
+    map.setCenter({lat: 15.092, lng: 10.000});  //38.092807, -56.085236
+    map.setZoom(2.25);
 }
-
-
 
