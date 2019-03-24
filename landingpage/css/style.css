@@ -39,6 +39,7 @@ h1 {
     text-align: center;
     color: #1E4F87; /*dark-blue */
     font-weight: bold;
+    size: 2em;
 }
 
 input[type=text] {
