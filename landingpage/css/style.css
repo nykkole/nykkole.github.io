@@ -1,0 +1,50 @@
+body {
+    font-family: sans-serif;
+    background-size: 50%;
+    background-repeat: no-repeat; 
+    background-position: right top;
+}
+
+#emailError {
+    color: red;
+}
+
+@media all and (max-width: 600px) {
+    body {
+        max-width: 100%;
+    }
+}
+
+#ARview {
+    width: 100%;
+}
+
+h1 {
+    color: #2e99e6; /*blue #2e99e6*/
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+#input-form {
+    text-align: center;
+}
+
+input[type=text] {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}

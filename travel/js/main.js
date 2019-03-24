@@ -5,9 +5,10 @@ var infowindow;
 // cluster pins in WA, CR and IRE when zoomed out
 // https://developers.google.com/maps/documentation/javascript/marker-clustering
 
+//different style clusters?
+
 // change pins to dots until click
-// WORK ON 368
-//      https://stackoverflow.com/questions/15523100/google-map-api-v3-change-marker-icon-on-click
+// https://stackoverflow.com/questions/15523100/google-map-api-v3-change-marker-icon-on-click
 
 // click event on map to clear infowindow
 
