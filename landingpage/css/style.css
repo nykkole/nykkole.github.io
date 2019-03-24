@@ -1,3 +1,8 @@
+/*Dark blue #1E4F87
+Mid blue #1594C1
+Light blue #00B0EF
+*/
+
 body {
     font-family: sans-serif;
     background-size: 50%;
@@ -20,13 +25,20 @@ body {
 }
 
 h1 {
-    color: #2e99e6; /*blue #2e99e6*/
+    color: #1594C1; /*mid blue */
     padding-bottom: 0.5em;
     text-align: center;
 }
 
 #input-form {
     text-align: center;
+}
+
+#success {
+    display: none;
+    text-align: center;
+    color: #1E4F87; /*dark-blue */
+    font-weight: bold;
 }
 
 input[type=text] {

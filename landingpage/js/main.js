@@ -41,5 +41,8 @@ $('#input-form').on('submit', function(e) {
 		});
 		// pat on the back
 		console.log('success');	
+		//show success message
+		$('#input-form').toggle();
+		$('#success').toggle();
 	}
 });
