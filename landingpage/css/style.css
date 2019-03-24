@@ -1,8 +1,3 @@
-/*Dark blue #1E4F87
-Mid blue #1594C1
-Light blue #00B0EF
-*/
-
 body {
     font-family: sans-serif;
     background-size: 50%;
@@ -23,6 +18,12 @@ body {
 #ARview {
     width: 100%;
 }
+
+/*Dark blue #1E4F87
+Mid blue #1594C1
+Light blue #00B0EF
+*/
+
 
 h1 {
     color: #1594C1; /*mid blue */
