@@ -1,8 +1,9 @@
 body {
-    font-family: sans-serif;
+    font-family: Roboto;
     background-size: 50%;
     background-repeat: no-repeat; 
     background-position: right top;
+    color: #1E4F87;
 }
 
 #emailError {
@@ -15,20 +16,36 @@ body {
     }
 }
 
+.tagline {
+    display: inline-block;
+    font-size: 2em;
+}
+
+.quote {
+    font-style: italic;
+    text-align: center;
+    font-size: 1.25em;
+}
+
 #ARview {
     width: 100%;
 }
 
 /*Dark blue #1E4F87
 Mid blue #1594C1
-Light blue #00B0EF
+Light blue #00aaed
 */
 
 
 h1 {
-    color: #1594C1; /*mid blue */
+    color: white;
     padding-bottom: 0.5em;
     text-align: center;
+}
+
+.blue {
+    padding: 0.5em;
+    background: #00aaed;
 }
 
 #input-form {
@@ -53,10 +70,20 @@ input[type=text] {
     box-sizing: border-box;
 }
 
+.content {
+    /*margin-top: 2em;*/
+    margin-bottom: 2em;
+}
+
+.mockup {
+    width: 100%;
+}
+
 #footer {
    position: fixed;
    left: 0;
    bottom: 0;
+   padding-top: 5px;
    width: 100%;
    background-color: red;
    color: white;

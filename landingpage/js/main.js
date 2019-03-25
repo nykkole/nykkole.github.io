@@ -1,5 +1,4 @@
 // --------------------- set up Firebase data base
-console.log('start');
 // Initialize Firebase
 var config = {
 	apiKey: "AIzaSyC5-2aGEptI85JXh1z4oTe5O74EUofpug8",
@@ -13,6 +12,15 @@ firebase.initializeApp(config);
 // Connect to Database
 var database = firebase.database();
 
+//record page load in database
+// $(document).ready(function() {
+// 	var visit = 'visited ' + new Date();
+// 	var userReference = database.ref('user');
+// 		userReference.push({
+// 		userVisit: visit
+// 	});
+// 	console.log('start');
+// });
 
 // --------------------- button to add new place to the map
 $('#input-form').on('submit', function(e) {
@@ -37,11 +45,11 @@ $('#input-form').on('submit', function(e) {
 		$('#email').val('');
 		var userReference = database.ref('user');
 			userReference.push({
-			userEmail: email
+			userEmail: email + new Date()
 		});
 		// pat on the back
 		console.log('success');	
-		
+
 		//show success message
 		$('#input-form').toggle();
 		$('#success').toggle();

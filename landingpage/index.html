@@ -4,17 +4,33 @@
 	<title>Test Landingpage</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <img src="images/UpSkill_Logo.png" />
+  <a href="www.upskill.io"><img src="images/UpSkill_Logo.png" /></a>
+  <div class="tagline">Augmented reality software for the industrial workforce.</div>
 </nav>
 
 <div class="container">
 	<div class="row">
+		<div class="col-xs-12 col-md-6">
+			<p class="quote">
+				<i class="fas fa-quote-left"></i> Typical cost of turnover is 16-20% of an employee’s annual salary.<i class="fas fa-quote-right"></i>(<a href="https://www.americanprogress.org/wp-content/uploads/2012/11/CostofTurnover.pdf" target="_blank">Center for American Progress, 2012</a>)
+			</p>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<p class="quote">
+				<i class="fas fa-quote-left"></i> Engaged mployees are 59% less likely to look for another job.
+				<i class="fas fa-quote-right"></i>(<a href="https://www.gallup.com/workplace/236483/enhances-benefits-employee-engagement.aspx" target="_blank">Gallup, 2015</a>)
+			</p>
+		</div>
+	</div>
+	<div class="row blue content">
 		<div class="col-xs-12 col-md-6">
 			<img id="ARview" src="images/ARinWarehouses.jpg" />
 		</div>
@@ -29,10 +45,37 @@
 		    <p id='success'>We received your information. Stay tuned for more info!</p>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-xs-12 col-md-6 content">
+			<p>Skylight Games for managers 
+				<ul>
+					<li>A drag and drop builder for gamified challenges</li>
+					<li>An easy way to implement reward fulfillment</li>
+					<li>Comprehensive dashboard of employee productivity</li>
+				</ul>
+			</p>
+		</div>
+		<div class="col-xs-12 col-md-6 content">
+			<p>Skylight Games for warehouse pickers
+				<ul>
+					<li>Real-time progress integrated into existing AR interface</li>
+					<li>Incentives to increase productivity throughout the shift</li>
+					<li>Community building via team challenges</li>
+				</ul>
+			</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-md-6 content">
+			<img src="images/ManagerDashboard.png" class="mockup">
+		</div>
+		<div class="col-xs-12 col-md-6 content">
+		</div>
+	</div>
 </div>
 
 <div id="footer">
-  <p>This page was developed for a class at the University of Washington. We have no affiliation with the company UpSkill or they product Skyline, and we are in not represent them in any way.</p>
+  <p>This page was developed for a class at the University of Washington. We have no affiliation with the company 'UpSkill' or their product 'Skylight', and we are not representing them in any way.</p>
 </div>
 
 <!-- Firebase -->
