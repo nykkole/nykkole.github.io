@@ -1,13 +1,7 @@
 body {
     font-family: Roboto;
     background-size: 50%;
-    background-repeat: no-repeat; 
-    background-position: right top;
     color: #1E4F87;
-}
-
-#emailError {
-    color: red;
 }
 
 @media all and (max-width: 600px) {
@@ -50,6 +44,10 @@ h1 {
 
 #input-form {
     text-align: center;
+}
+
+#emailError {
+    color: red;
 }
 
 #success {
