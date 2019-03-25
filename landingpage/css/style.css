@@ -15,10 +15,19 @@ body {
     font-size: 2em;
 }
 
+.noMargin {
+    margin-top: 0;
+}
+
 .quote {
     font-style: italic;
     text-align: center;
-    font-size: 1.25em;
+}
+
+.upbeat {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
 }
 
 #ARview {
@@ -71,6 +80,7 @@ input[type=text] {
 .content {
     /*margin-top: 2em;*/
     margin-bottom: 2em;
+    font-size: 1.5em;
 }
 
 .mockup {
