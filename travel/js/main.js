@@ -139,6 +139,11 @@ function initMap() {
         position: new google.maps.LatLng(48.0690, -121.6692),
         type: 'camping'
       }, {
+        heading: 'Game Farm Wilderness Park, Apr 2019',
+        description: 'Camping next to a disc golf course',
+        position: new google.maps.LatLng(47.279237, -122.195413),
+        type: 'camping'
+      }, {
         heading: '',
         description: '',
         position: new google.maps.LatLng(),
@@ -501,6 +506,111 @@ function initMap() {
         description: 'First hotel in Hyderabad', 
         position: new google.maps.LatLng(17.423298, 78.462541),
         type: 'sleeping'
+      }, {
+        heading: "Farzi Cafe",
+        description: 'Indian streetfood in a cafe/restaurant', 
+        position: new google.maps.LatLng(18.994624, 72.825018),
+        type: 'dining'
+      }, {
+        heading: "Gateway of India",
+        description: '', 
+        position: new google.maps.LatLng(18.921990, 72.834583),
+        type: 'highlight'
+      }, {
+        heading: "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
+        description: 'History and art museum', 
+        position: new google.maps.LatLng(18.926718, 72.832493),
+        type: 'highlight'
+      }, {
+        heading: "Burma Burma",
+        description: 'Delishes Burmese food', 
+        position: new google.maps.LatLng(18.929534, 72.831992),
+        type: 'dining'
+      }, {
+        heading: "Cross Maidan Garden",
+        description: 'Concert during Art Festival', 
+        position: new google.maps.LatLng(18.933694, 72.829171),
+        type: 'scenic'
+      }, {
+        heading: "Kanheri Caves",
+        description: 'Archeological site of cave dwellings', 
+        position: new google.maps.LatLng(19.207895, 72.904887),
+        type: 'highlight'
+      }, {
+        heading: "Bonobo",
+        description: 'Rooftop bar', 
+        position: new google.maps.LatLng(19.065456, 72.834102),
+        type: 'dining'
+      }, {
+        heading: "Samrat",
+        description: 'North Indian restaurant', 
+        position: new google.maps.LatLng(18.930513, 72.826468),
+        type: 'dining'
+      }, {
+        heading: "Samrat",
+        description: 'North Indian dining', 
+        position: new google.maps.LatLng(18.930513, 72.826468),
+        type: 'dining'
+      }, {
+        heading: "Hanghing Gardens",
+        description: 'Park with geocache', 
+        position: new google.maps.LatLng(18.956657, 72.804896),
+        type: 'scenic'
+      }, {
+        heading: "Pramod Navalkar Viewing Gallery",
+        description: '', 
+        position: new google.maps.LatLng(18.956253, 72.805960),
+        type: 'scenic'
+      }, {
+        heading: "Golconda Fort",
+        description: '500 year old fortress', 
+        position: new google.maps.LatLng(17.384195, 78.402702),
+        type: 'highlight'
+      }, {
+        heading: "Hatiyan Jhad Baobab Tree",
+        description: 'Biggest Baobab Tree in India', 
+        position: new google.maps.LatLng(17.392901, 78.410797),
+        type: 'scenic'
+      }, {
+        heading: "Autumn Leaf Cafe",
+        description: 'Cafe with outdoor seating in garden', 
+        position: new google.maps.LatLng(17.434033, 78.402043),
+        type: 'dining'
+      }, {
+        heading: "Prost Brewpub",
+        description: 'Good beer and indian streetfood (Paani Puri)', 
+        position: new google.maps.LatLng(17.431530, 78.400390),
+        type: 'dining'
+      }, {
+        heading: "Paradise Biryani",
+        description: '', 
+        position: new google.maps.LatLng(17.401087, 78.485711),
+        type: 'dining'
+      }, {
+        heading: "Charminar",
+        description: 'Mosque with four minarets', 
+        position: new google.maps.LatLng(17.361650, 78.474667),
+        type: 'highlight'
+      }, {
+        heading: "Doctor Homi J Bhabha Community Hall",
+        description: 'Excellent place to hold a wedding', 
+        position: new google.maps.LatLng(17.474324, 78.559429),
+        type: 'highlight'
+      }, {
+        heading: "The Coffee Cup",
+        description: 'Coffee and food', 
+        position: new google.maps.LatLng(17.483193, 78.552071),
+        type: 'dining'
+      }, {
+        heading: "Aalankrita Resort & Spa",
+        description: '', 
+        position: new google.maps.LatLng(17.571818, 78.557920),
+        type: 'sleeping'
+      }, {
+        heading: "Dialogue In The Dark",
+        description: 'Dining without light', 
+        position: new google.maps.LatLng(17.433919, 78.386282),
+        type: 'dining'
       }
     ];
 
@@ -710,6 +820,18 @@ function zoomtoWA(){
     infowindow.close();
     map.setCenter({lat: 47.680, lng: -122.161}); //47.680027, -122.161136
     map.setZoom(8);
+}
+
+function zoomtoMUM(){
+    infowindow.close();
+    map.setCenter({lat: 19.060, lng: 72.886}); //19.060, 72.886
+    map.setZoom(11);
+}
+
+function zoomtoHYD(){
+    infowindow.close();
+    map.setCenter({lat: 17.434, lng: 78.484}); //17.434524, 78.414931
+    map.setZoom(12);
 }
 
 function zoomout(){
