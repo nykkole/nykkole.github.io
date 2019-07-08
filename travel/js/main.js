@@ -691,7 +691,7 @@ function calcRouteCR() {
         {location: 'Costa Rica Guesthouse'},
         {location: 'Nuevo Arenal Costa Rica'},
         {location: 'La Fortuna Costa Rica'},
-        {location: 'Hostel Casa Tranquilo'},
+        {location: 'Hostel Casa Tranquilo, Costa Rica'},
         {location: 'Catarata Falls, Guanacaste Province, Bagaces, Costa Rica'},
         {location: 'Liberia Airport Costa Rica'},
         {location: 'Rinconcito Lodge Costa Rica'},
@@ -718,6 +718,36 @@ function calcRouteCR() {
         }
     });
 }
+
+var flightPlanCoordinates = [
+{lat: 47.681481, lng: -122.341368}, //47.681481, -122.341368
+{lat: 47.672948, lng: -122.337252}, //47.672948, -122.337252
+];
+
+var flightPath = new google.maps.Polyline({
+    path: flightPlanCoordinates,
+    geodesic: true,
+    strokeColor: '#FF0000',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+});
+
+        flightPath.setMap(map);
+
+var flightPlanCoordinates = [
+          {lat: 47.677602, lng: -122.332493}, //47.677602, -122.332493
+          {lat: 47.672031, lng: -122.343396}, //47.672031, -122.343396
+        ];
+        var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+
+        flightPath.setMap(map);
+
 
 function calcRouteIRE() {
     var directionsService = new google.maps.DirectionsService();
